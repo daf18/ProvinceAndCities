@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4EEB2"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".MainActivity">
@@ -16,7 +17,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
 
-    />
+        />
 
     <Spinner
         android:id="@+id/spinner_provinces"
@@ -25,22 +26,22 @@
         android:layout_margin="10dp"
         android:contentDescription="@string/provinces_du_canada"
         android:minHeight="48dp" />
+
     <TextView
         android:id="@+id/villes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/villes"
         android:textSize="20sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/spinner_villes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:minHeight="48dp"
-        android:contentDescription="@string/villes_choisie"/>
+        android:contentDescription="@string/villes_choisie"
+        android:minHeight="48dp" />
 
     <ImageView
         android:id="@+id/image"
@@ -50,7 +51,6 @@
         android:layout_marginStart="3dip"
         android:contentDescription="@string/province_flag"
         android:scaleType="center"
-        android:src="@drawable/quebec"
-         />
+        android:src="@drawable/quebec" />
 
 </LinearLayout>

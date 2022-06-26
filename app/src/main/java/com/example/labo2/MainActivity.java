@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -29,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addItemsProvincesSpinner();
+        addItemsSpinners();
 
     }
-    public void addItemsProvincesSpinner(){
+    public void addItemsSpinners(){
 
         spinner_provinces = findViewById(R.id.spinner_provinces);
         spinner_villes = findViewById(R.id.spinner_villes);
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView img= (ImageView) findViewById(R.id.image);
 
         arrayList_provinces = new ArrayList<>();
-        arrayList_provinces.add("Quebec");
+        arrayList_provinces.add("Québec");
         arrayList_provinces.add("Ontario");
         arrayList_provinces.add("Nouvelle-Ecosse");
         arrayList_provinces.add("Nouveau-Brunswick");
@@ -91,23 +90,85 @@ public class MainActivity extends AppCompatActivity {
         arrayList_mb.add("Thompson");
         arrayList_mb.add("Portage La Prairie");
 
-        // TODO: finish provinces
+        arrayList_bc = new ArrayList<>();
+        arrayList_bc.add("Vancouver");
+        arrayList_bc.add("Surrey");
+        arrayList_bc.add("Burnaby");
+        arrayList_bc.add("Richmond");
+        arrayList_bc.add("Abbotsford");
+
+        arrayList_pei = new ArrayList<>();
+        arrayList_pei.add("Charlottetown");
+        arrayList_pei.add("Summerside");
+        arrayList_pei.add("Stratford");
+        arrayList_pei.add("Cornwall");
+        arrayList_pei.add("Three Rivers");
+
+        arrayList_sk = new ArrayList<>();
+        arrayList_sk.add("Saskatoon");
+        arrayList_sk.add("Regina");
+        arrayList_sk.add("Prince Albert");
+        arrayList_sk.add("Moose Jaw");
+        arrayList_sk.add("Swift Current");
+
+        arrayList_alb = new ArrayList<>();
+        arrayList_alb.add("Calgary");
+        arrayList_alb.add("Edmonton");
+        arrayList_alb.add("Red Deer");
+        arrayList_alb.add("Lethbridge");
+        arrayList_alb.add("St. Albert");
+
+        arrayList_tnl = new ArrayList<>();
+        arrayList_tnl.add("St. John’s");
+        arrayList_tnl.add("Conception Bay South");
+        arrayList_tnl.add("Mount Pearl");
+        arrayList_tnl.add("Paradise");
+        arrayList_tnl.add("Corner Brook");
 
         spinner_provinces.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                Toast.makeText(parent.getContext(),
-                         parent.getItemAtPosition(pos).toString(),
-                        Toast.LENGTH_LONG).show();
 
                 switch (parent.getItemAtPosition(pos).toString()) {
-                    case "Quebec":
+                    case "Québec":
                         arrayAdapter_villes = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_qc);
                         img.setImageResource(R.drawable.quebec);
                         break;
                     case "Ontario":
                         arrayAdapter_villes = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_on);
                         img.setImageResource(R.drawable.ontario);
+                        break;
+                    case "Nouvelle-Ecosse":
+                        arrayAdapter_villes = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_ns);
+                        img.setImageResource(R.drawable.ns);
+                        break;
+                    case "Nouveau-Brunswick":
+                        arrayAdapter_villes = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_nb);
+                        img.setImageResource(R.drawable.nb);
+                        break;
+                    case "Manitoba":
+                        arrayAdapter_villes = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_mb);
+                        img.setImageResource(R.drawable.mb);
+                        break;
+                    case "Colombie-Britannique":
+                        arrayAdapter_villes = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_bc);
+                        img.setImageResource(R.drawable.bc);
+                        break;
+                    case "Ile-du-Prince-Edouard":
+                        arrayAdapter_villes = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_pei);
+                        img.setImageResource(R.drawable.pei);
+                        break;
+                    case "Saskatchewan":
+                        arrayAdapter_villes = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_sk);
+                        img.setImageResource(R.drawable.sk);
+                        break;
+                    case "Alberta":
+                        arrayAdapter_villes = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_alb);
+                        img.setImageResource(R.drawable.alb);
+                        break;
+                    case "Terre-Neuve-et-Labrador":
+                        arrayAdapter_villes = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_tnl);
+                        img.setImageResource(R.drawable.tnl);
                         break;
                 }
     spinner_villes.setAdapter(arrayAdapter_villes);
