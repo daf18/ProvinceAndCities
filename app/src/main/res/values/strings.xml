@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Labo2</string>
+    <string name="provinces">Provinces :</string>
+    <string name="villes">Villes :</string>
+    <string name="provinces_du_canada">Provinces du Canada</string>
+    <string name="villes_choisie">Villes de la province choisie</string>
+</resources>

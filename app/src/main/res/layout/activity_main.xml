@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/provinces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/provinces"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+    />
+
+    <Spinner
+        android:id="@+id/spinner_provinces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:minHeight="48dp"
+        android:contentDescription="@string/provinces_du_canada"/>
+    <TextView
+        android:id="@+id/villes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/villes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <Spinner
+        android:id="@+id/spinner_villes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:minHeight="48dp"
+        android:contentDescription="@string/villes_choisie"/>
+
+</LinearLayout>
