@@ -23,8 +23,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:minHeight="48dp"
-        android:contentDescription="@string/provinces_du_canada"/>
+        android:contentDescription="@string/provinces_du_canada"
+        android:minHeight="48dp" />
     <TextView
         android:id="@+id/villes"
         android:layout_width="match_parent"
@@ -41,5 +41,16 @@
         android:layout_margin="10dp"
         android:minHeight="48dp"
         android:contentDescription="@string/villes_choisie"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginStart="3dip"
+        android:contentDescription="@string/province_flag"
+        android:scaleType="center"
+        android:src="@drawable/quebec"
+         />
 
 </LinearLayout>

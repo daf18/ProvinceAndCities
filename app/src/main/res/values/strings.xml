@@ -4,4 +4,5 @@
     <string name="villes">Villes :</string>
     <string name="provinces_du_canada">Provinces du Canada</string>
     <string name="villes_choisie">Villes de la province choisie</string>
+    <string name="province_flag">province flag</string>
 </resources>
